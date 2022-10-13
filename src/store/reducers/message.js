@@ -10,7 +10,8 @@ const initialState = {
     count: 0,
     des: [
         { id: 1, value: 0 },
-        { id: 2, title: 0 },
+        { id: 2, value: 0 },
+        { id: 3, value: 0 },
     ],
 }
 
