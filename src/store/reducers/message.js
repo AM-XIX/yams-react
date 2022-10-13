@@ -27,12 +27,6 @@ const reducer = (state = initialState, action = {}) => {
                 count: state.count + 1 // on modifie une clé de notre nouveau tableau
             }
 
-        case GET_DES:
-            return {
-                ...state,
-                des: action.payload
-            }
-
         case SET_DES:
 
             const newDes = {

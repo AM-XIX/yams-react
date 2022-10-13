@@ -23,16 +23,19 @@ function Home() {
 
   function launchVerif() {
     const id = des.length - 1;
-    
     if (id < 0 || des.length === undefined) {
-      return ;
+      return;
     } else {
-      if (des[id].number1 === des[id].number2 && des[id].number2 === des[id].number3) {
-        alert('TRIPLE !');
-      } else if (des[id].number1 === des[id].number2 || des[id].number2 === des[id].number3 || des[id].number1 === des[id].number3) {
-          // dispatch(get_double(des[id].number1, des[id].number2, des[id].number3));
-        alert('DOUBLE !');
-      }
+      verification(des[id].number1, des[id].number2, des[id].number3);
+    }
+  }
+
+  function verification(number1, number2, number3) {
+    if (number1 === number2 && number2 === number3) {
+      alert('TRIPLE !');
+    } else if (number1 === number2 || number2 === number3 || number1 === number3) {
+      // dispatch(get_double([number1, number2, number3]));
+      alert('DOUBLE !');
     }
   }
 

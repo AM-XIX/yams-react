@@ -10,7 +10,7 @@ console.log(initialState);
 const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
         case GET_DOUBLE:
-            
+
         const doubles = [...state.doubles]
         doubles.push(action.payload);
 
