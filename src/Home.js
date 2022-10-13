@@ -11,19 +11,15 @@ function Home() {
     console.log(des);
   }
 
-  function randomDice(min, max) {
-    dispatch(set_des());
-  }
-  
   return (
     <div className="App">
-      <button onClick={() => randomDice(1, 6)}>Lancer</button>
-      <button onClick={() => dispatch(set_count())} > COUNT + 1 </button>
+      <button onClick={() => dispatch(set_des())}>Lancer</button>
+      {/* <button onClick={() => dispatch(set_count())} > COUNT + 1 </button> */}
       {messages.map((message, i) => <p key={i}>{message}</p>)}
-      <p>{count}</p>
-      <button onClick={() => dispatch(set_message(Math.random().toString()))} > ADD ALEA MESSAGE </button>
+      {/* <p>{count}</p> */}
+      {/* <button onClick={() => dispatch(set_message(Math.random().toString()))} > ADD ALEA MESSAGE </button> */}
       <button onClick={() => showDes()} >Message Dés</button>
-      
+      {console.log(des)}    
 
     </div>
   );

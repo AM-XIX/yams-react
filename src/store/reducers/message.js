@@ -3,8 +3,7 @@ import { ADD_MESSAGE, SET_MESSAGE, SET_COUNT, GET_DES, SET_DES } from '../consta
 // SOURCE DE VERITE == structure du store 
 const initialState = {
     messages: [
-        "Hello World !",
-        "Bonjour tout le monde !"
+        "Jeu du Yams",
     ],
     message: '',
     count: 0,
