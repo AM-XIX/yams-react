@@ -7,14 +7,6 @@ function Home() {
   // actions dispatch dans le reducer => newState 
   const dispatch = useDispatch();
 
-  function showDes() {
-    console.log(des);
-  }
-
-  function randomDice() {
-    dispatch(set_des());
-  }
-
   return (
     <div className="App">
       <button onClick={() => dispatch(set_des())}>Lancer</button>
