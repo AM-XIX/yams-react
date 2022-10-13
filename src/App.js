@@ -1,19 +1,30 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import Home from "./Home";
+import styled from 'styled-components'
+
+const Wrapper = styled.section`
+background-color: black;
+color: white;
+font-size: 1.1em;
+text-align: center;
+margin-top: -2%;
+padding-top: 2%;
+`;
 
 function Navigation() {
   return (
-    <div>
+    <div> <Wrapper>
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink style={{color:"white"}} to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink style={{color:"white"}} to="/about">About</NavLink>
           </li>
         </ul>
       </nav>
+    </Wrapper>
     </div>
   );
 }
@@ -22,12 +33,14 @@ function App() {
 
   return (
     <>
-      <Navigation />
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/about" element={<p>About</p>} />
-        <Route path="*" element={<p>No match</p>} />
-      </Routes>
+      <Wrapper>
+        <Navigation />
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/about" element={<p>About</p>} />
+          <Route path="*" element={<p>No match</p>} />
+        </Routes>
+      </Wrapper>
     </>
   );
 }
