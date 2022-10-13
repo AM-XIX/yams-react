@@ -45,8 +45,10 @@ const reducer = (state = initialState, action = {}) => {
         case SET_DES:
 
             const newDes = {
-                value: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
-              }
+                number1: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
+                number2: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
+                number3: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
+            }
         
             return {
                 ...state,

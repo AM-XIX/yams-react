@@ -11,13 +11,13 @@ function Home() {
     console.log(des);
   }
 
-  function randomDice(min, max) {
+  function randomDice() {
     dispatch(set_des());
   }
   
   return (
     <div className="App">
-      <button onClick={() => randomDice(1, 6)}>Lancer</button>
+      <button onClick={() => randomDice()}>Lancer</button>
       <button onClick={() => dispatch(set_count())} > COUNT + 1 </button>
       {messages.map((message, i) => <p key={i}>{message}</p>)}
       <p>{count}</p>
