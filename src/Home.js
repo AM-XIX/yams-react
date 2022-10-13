@@ -11,6 +11,10 @@ function Home() {
     console.log(des);
   }
 
+  function randomDice() {
+    dispatch(set_des());
+  }
+  
   return (
     <div className="App">
       <button onClick={() => dispatch(set_des())}>Lancer</button>
