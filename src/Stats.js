@@ -11,14 +11,18 @@ function Stats() {
   font-size: 5em;
   text-align: center;
   color:white;
-  margin-top: 0%;
+  margin-top: 1%;
+`;
+
+const Pstyled = styled.p`
+  font-size: 1.4em;
 `;
 
   return (
     <div className="App">
       
       <Title>Statistiques</Title>
-      <p>Nombre d'expérience : [{count}]</p>
+      <Pstyled>Nombre d'expérience : [{count}]</Pstyled>
 
     </div>
     
