@@ -21,7 +21,7 @@ function Navigation() {
             <NavLink style={{color:"white"}} to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink style={{color:"white"}} to="/about">About</NavLink>
+            <NavLink style={{color:"white"}} to="/stats">Stats</NavLink>
           </li>
         </ul>
       </nav>
@@ -38,7 +38,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/about" element={<Stats />} />
+          <Route path="/stats" element={<Stats />} />
           <Route path="*" element={<p>No match</p>} />
         </Routes>
       </Wrapper>
