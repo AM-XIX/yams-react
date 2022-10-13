@@ -17,6 +17,7 @@ function Home() {
 
   function verification(var1, var2, var3) {
     if (var1 === var2 && var2 === var3) {
+      alert("Vous avez gagné");
       return "Gagné";
     }
   }
@@ -32,14 +33,11 @@ function Home() {
       <Title>YAMS</Title>
       <center><img src='https://thumbs.gfycat.com/ElatedImpartialArmadillo-max-1mb.gif' width="350" alt='Yams' /></center>
       <button onClick={() => lancer()}>Lancer</button>
-      <p>Nombre d'essais : {count}</p>
+      <p>Nombre d'expérience : [{count}]</p>
 
       {des.map((des, i) =>
         <p key={i} id={i}>{des.number1} {des.number2} {des.number3}</p>)
       }
-      
-      {/* { suppdata(des.map.lenght) } */}
-
 
       {des.map((des, i) =>
         <p key={i}>{verification(des.number1, des.number2, des.number3)}</p>)

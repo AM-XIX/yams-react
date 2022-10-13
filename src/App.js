@@ -1,5 +1,6 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import Home from "./Home";
+import Stats from "./Stats";
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
@@ -37,7 +38,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/about" element={<p>About</p>} />
+          <Route path="/about" element={<Stats />} />
           <Route path="*" element={<p>No match</p>} />
         </Routes>
       </Wrapper>
