@@ -10,10 +10,14 @@ function Home() {
   function showDes() {
     console.log(des);
   }
-  
 
+  function randomDice(min, max) {
+    console.log(Math.floor(Math.random() * (max - min + 1) + min));
+  }
+  
   return (
     <div className="App">
+      <button onClick={() => randomDice(1, 6)}>Lancer</button>
       <button onClick={() => dispatch(set_count())} > COUNT + 1 </button>
       {messages.map((message, i) => <p key={i}>{message}</p>)}
       <p>{count}</p>

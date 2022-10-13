@@ -15,9 +15,9 @@ const initialState = {
     ],
 }
 
+console.log(initialState);
 const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
-
         case SET_MESSAGE:
 
             // nouvelle référence des messages un nouveau tableau 
