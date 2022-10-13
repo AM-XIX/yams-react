@@ -3,20 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
 
-import reducer from './store/reducers/index';
+import message from './store/reducers/message';
 
-const store = createStore(reducer);
+const store = configureStore({
+  reducer: {
+    message
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Contextualise le store pour l'arbre React à l'aide du Provider 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
