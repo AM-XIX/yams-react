@@ -12,6 +12,7 @@ margin-top: -2%;
 padding-top: 2%;
 `;
 
+
 function Navigation() {
   return (
     <div> <Wrapper>
