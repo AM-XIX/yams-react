@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { set_count, set_message, get_des } from './store/actions/actions-types';
+import { set_count, set_message, get_des, set_des } from './store/actions/actions-types';
 
 function Home() {
   // lecture du store de la source de vérité read-only
@@ -12,7 +12,7 @@ function Home() {
   }
 
   function randomDice(min, max) {
-    console.log(Math.floor(Math.random() * (max - min + 1) + min));
+    dispatch(set_des(Math.floor(Math.random() * (max - min + 1) + min).toString()))
   }
   
   return (

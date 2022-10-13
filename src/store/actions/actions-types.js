@@ -24,3 +24,9 @@ export const get_des = () => {
         type: GET_DES
     }
 };
+
+export const set_des = payload => {
+    return {
+        type: SET_DES, payload
+    }
+};
