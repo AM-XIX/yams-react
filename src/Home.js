@@ -14,16 +14,14 @@ function Home() {
   function randomDice() {
     dispatch(set_des());
   }
-  
+
   return (
     <div className="App">
       <button onClick={() => dispatch(set_des())}>Lancer</button>
-      {/* <button onClick={() => dispatch(set_count())} > COUNT + 1 </button> */}
+      <button onClick={() => dispatch(set_count())} > COUNT + 1 </button>
       {messages.map((message, i) => <p key={i}>{message}</p>)}
-      {/* <p>{count}</p> */}
-      {/* <button onClick={() => dispatch(set_message(Math.random().toString()))} > ADD ALEA MESSAGE </button> */}
-      <button onClick={() => showDes()} >Message Dés</button>
-      {console.log(des)}    
+      <p>{count}</p>
+      {des.map((des, i) => <p key={i}>{des.number1} {des.number2} {des.number3}</p>)}
 
     </div>
   );
