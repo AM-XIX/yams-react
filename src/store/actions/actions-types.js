@@ -1,4 +1,4 @@
-import { ADD_MESSAGE , SET_COUNT, SET_MESSAGE } from '../constants/actions';
+import { ADD_MESSAGE , SET_COUNT, SET_MESSAGE, GET_DES } from '../constants/actions';
 
 // on prépare de petites fonctions anonymes pour le dispatcher
 export const addMessage = payload => {
@@ -16,5 +16,11 @@ export const set_message = payload => {
 export const set_count = () => {
     return {
         type: SET_COUNT
+    }
+};
+
+export const get_des = () => {
+    return {
+        type: GET_DES
     }
 };

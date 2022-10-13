@@ -1,4 +1,4 @@
-import { ADD_MESSAGE, SET_MESSAGE, SET_COUNT } from '../constants/actions';
+import { ADD_MESSAGE, SET_MESSAGE, SET_COUNT, GET_DES } from '../constants/actions';
 
 // SOURCE DE VERITE == structure du store 
 const initialState = {
@@ -7,7 +7,11 @@ const initialState = {
         "Bonjour tout le monde !"
     ],
     message: '',
-    count: 0
+    count: 0,
+    des: [
+        { id: 1, value: 0 },
+        { id: 2, title: 0 },
+    ],
 }
 
 const reducer = (state = initialState, action = {}) => {
@@ -20,7 +24,7 @@ const reducer = (state = initialState, action = {}) => {
 
             messages.push(action.payload);
 
-            console.log(initialState);
+            // console.log(initialState);
 
             return {
                 ...state,
@@ -33,6 +37,13 @@ const reducer = (state = initialState, action = {}) => {
                 ...state, // une copie peu profonde 
                 count: state.count + 1 // on modifie une clé de notre nouveau tableau
             }
+
+        case GET_DES:
+            return {
+                ...state,
+                des: action.payload
+            }
+
 
         default:
             return state;
