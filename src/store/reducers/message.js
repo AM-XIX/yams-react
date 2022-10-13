@@ -1,4 +1,4 @@
-import { ADD_MESSAGE, SET_MESSAGE, SET_COUNT, GET_DES } from '../constants/actions';
+import { ADD_MESSAGE, SET_MESSAGE, SET_COUNT, GET_DES, SET_DES } from '../constants/actions';
 
 // SOURCE DE VERITE == structure du store 
 const initialState = {
@@ -9,9 +9,8 @@ const initialState = {
     message: '',
     count: 0,
     des: [
-        { id: 1, value: 0 },
-        { id: 2, value: 0 },
-        { id: 3, value: 0 },
+        1,
+        2
     ],
 }
 
@@ -45,6 +44,15 @@ const reducer = (state = initialState, action = {}) => {
                 des: action.payload
             }
 
+        case SET_DES:
+            const des = [...state.des]
+
+            des.push(action.payload);
+
+            return {
+                ...state,
+                des
+            }
 
         default:
             return state;
