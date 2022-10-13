@@ -9,8 +9,6 @@ const initialState = {
     message: '',
     count: 0,
     des: [
-        1,
-        2
     ],
 }
 
@@ -45,14 +43,24 @@ const reducer = (state = initialState, action = {}) => {
             }
 
         case SET_DES:
-            const des = [...state.des]
 
-            des.push(action.payload);
-
+            const newDes = {
+                value: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
+              }
+        
             return {
                 ...state,
-                des
+                des: state.des.concat(newDes),
             }
+
+            // const des = [...state.des]
+
+            // des.push(action.payload);
+
+            // return {
+            //     ...state,
+            //     des
+            // }
 
         default:
             return state;

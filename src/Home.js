@@ -12,7 +12,7 @@ function Home() {
   }
 
   function randomDice(min, max) {
-    dispatch(set_des(Math.floor(Math.random() * (max - min + 1) + min)))
+    dispatch(set_des());
   }
   
   return (
