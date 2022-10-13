@@ -1,32 +1,24 @@
-import { ADD_MESSAGE, SET_MESSAGE, SET_COUNT, GET_DES, SET_DES } from '../constants/actions';
+import { SET_COUNT, GET_DES, SET_DES } from '../constants/actions';
 
 // SOURCE DE VERITE == structure du store 
 const initialState = {
-    messages: [
-        "Jeu du Yams",
-    ],
     message: '',
     count: 0,
-    des: [
-    ],
+    des: [],
 }
 
 console.log(initialState);
 const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
-        case SET_MESSAGE:
-
-            // nouvelle référence des messages un nouveau tableau 
-            const messages = [...state.messages]
-
-            messages.push(action.payload);
-
-            // console.log(initialState);
-
-            return {
-                ...state,
-                messages
-            }
+        // case SET_MESSAGE:
+        //     // nouvelle référence des messages un nouveau tableau 
+        //     const messages = [...state.messages]
+        //     messages.push(action.payload);
+        //     // console.log(initialState);
+        //     return {
+        //         ...state,
+        //         messages
+        //     }
 
         case SET_COUNT:
 
@@ -53,16 +45,6 @@ const reducer = (state = initialState, action = {}) => {
                 ...state,
                 des: state.des.concat(newDes),
             }
-
-            // const des = [...state.des]
-
-            // des.push(action.payload);
-
-            // return {
-            //     ...state,
-            //     des
-            // }
-
         default:
             return state;
     }

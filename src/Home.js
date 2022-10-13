@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { set_count, set_message, set_des } from './store/actions/actions-types';
+import { set_count, set_des } from './store/actions/actions-types';
 import styled from 'styled-components'
 
 function Home() {
-  const { messages, count, des } = useSelector(state => state.message); // on récupère le state du store
+  const { count, des } = useSelector(state => state.message); // on récupère le state du store
   const dispatch = useDispatch(); // permet d'envoyer des actions au store
 
   // styled components
