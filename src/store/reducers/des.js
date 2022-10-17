@@ -1,9 +1,10 @@
-import { SET_COUNT, GET_DES, SET_DES, SET_DOUBLE, SET_COUNT_DOUBLE } from '../constants/actions';
+import { SET_COUNT, SET_DES, SET_DOUBLE, SET_COUNT_DOUBLE, SET_COUNT_TRIPLE } from '../constants/actions';
 
 // SOURCE DE VERITE == structure du store 
 const initialState = {
     count: 0,
     countDouble: 0,
+    countTriple: 0,
     des: [],
     double: [],
 }
@@ -17,11 +18,17 @@ const reducer = (state = initialState, action = {}) => {
                 ...state, // une copie peu profonde 
                 count: state.count + 1
             }
-        
+
         case SET_COUNT_DOUBLE:
             return {
                 ...state,
                 countDouble: state.countDouble + 1
+            }
+
+        case SET_COUNT_TRIPLE:
+            return {
+                ...state,
+                countTriple: state.countTriple + 1
             }
 
         case SET_DES:
@@ -31,7 +38,7 @@ const reducer = (state = initialState, action = {}) => {
                 number2: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
                 number3: Math.floor(Math.random() * (6 - 1 + 1) + 1), //
             }
-        
+
             return {
                 ...state,
                 des: state.des.concat(newDes),

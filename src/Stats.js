@@ -8,19 +8,21 @@ const Title = styled.h1`
   color:white;
   margin-top: 1%;
 `;
-function Stats() {
-  const { count, des } = useSelector(state => state.des); // on récupère le state du store
-  const dispatch = useDispatch(); // permet d'envoyer des actions au store
 
-  const Pstyled = styled.p`
-  font-size: 1.4em;
+const Pstyled = styled.p`
+font-size: 1.4em;
 `;
+
+function Stats() {
+  const { count, des, countDouble } = useSelector(state => state.des); // on récupère le state du store
+  const dispatch = useDispatch(); // permet d'envoyer des actions au store
 
   return (
     <div className="App">
 
       <Title>Statistiques</Title>
-      <Pstyled>Nombre d'expérience : [{count}]</Pstyled>
+      <Pstyled>Nombre d'expérience : [{count}] <br></br>
+      Nombre de doubles : [{countDouble}]</Pstyled>
 
     </div>
 
