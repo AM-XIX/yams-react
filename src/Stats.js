@@ -9,7 +9,7 @@ const Title = styled.h1`
   margin-top: 1%;
 `;
 function Stats() {
-  const { count, des } = useSelector(state => state.message); // on récupère le state du store
+  const { count, des } = useSelector(state => state.des); // on récupère le state du store
   const dispatch = useDispatch(); // permet d'envoyer des actions au store
 
   const Pstyled = styled.p`

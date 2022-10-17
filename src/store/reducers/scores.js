@@ -1,4 +1,4 @@
-import { GET_DOUBLE } from '../constants/actions';
+// import { GET_DOUBLE } from '../constants/actions';
 
 // SOURCE DE VERITE == structure du store 
 const initialState = {
@@ -8,20 +8,20 @@ const initialState = {
 
 console.log(initialState);
 const reducer = (state = initialState, action = {}) => {
-    switch (action.type) {
-        case GET_DOUBLE:
+    // switch (action.type) {
+    //     case GET_DOUBLE:
 
-        const doubles = [...state.doubles]
-        doubles.push(action.payload);
+    //     const doubles = [...state.doubles]
+    //     doubles.push(action.payload);
 
-        return {
-            ...state,
-            doubles
-        }
+    //     return {
+    //         ...state,
+    //         doubles
+    //     }
 
-        default:
-            return state;
-    }
+    //     default:
+    //         return state;
+    // }
 }
 
 export default reducer;

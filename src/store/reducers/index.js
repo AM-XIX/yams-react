@@ -1,9 +1,7 @@
 import { combineReducers } from 'redux';
 // reducers 
-import reducerMessage from './message';
-import reducerScores from './scores';
+import reducerDes from './des';
 
 export default combineReducers({
-    m : reducerMessage,
-    s : reducerScores,
+    m : reducerDes,
 });

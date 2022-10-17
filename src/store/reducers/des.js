@@ -1,30 +1,27 @@
-import { SET_COUNT, GET_DES, SET_DES } from '../constants/actions';
+import { SET_COUNT, GET_DES, SET_DES, SET_DOUBLE, SET_COUNT_DOUBLE } from '../constants/actions';
 
 // SOURCE DE VERITE == structure du store 
 const initialState = {
-    message: '',
     count: 0,
+    countDouble: 0,
     des: [],
+    double: [],
 }
 
 console.log(initialState);
 const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
-        // case SET_MESSAGE:
-        //     // nouvelle référence des messages un nouveau tableau 
-        //     const messages = [...state.messages]
-        //     messages.push(action.payload);
-        //     // console.log(initialState);
-        //     return {
-        //         ...state,
-        //         messages
-        //     }
-
         case SET_COUNT:
 
             return {
                 ...state, // une copie peu profonde 
-                count: state.count + 1 // on modifie une clé de notre nouveau tableau
+                count: state.count + 1
+            }
+        
+        case SET_COUNT_DOUBLE:
+            return {
+                ...state,
+                countDouble: state.countDouble + 1
             }
 
         case SET_DES:
@@ -39,9 +36,33 @@ const reducer = (state = initialState, action = {}) => {
                 ...state,
                 des: state.des.concat(newDes),
             }
+
+        // save doubles
+        case SET_DOUBLE:
+            return {
+                ...state,
+                double: state.double.concat(action.payload),
+            }
+
+
         default:
             return state;
     }
 }
 
 export default reducer;
+
+// switch (action.type) {
+//     case GET_DOUBLE:
+
+//     const doubles = [...state.doubles]
+//     doubles.push(action.payload);
+
+//     return {
+//         ...state,
+//         doubles
+//     }
+
+//     default:
+//         return state;
+// }

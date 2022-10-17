@@ -1,4 +1,4 @@
-import { GET_DOUBLE, SET_COUNT, SET_DES } from '../constants/actions';
+import { SET_COUNT, SET_DES, SET_DOUBLE, SET_COUNT_DOUBLE } from '../constants/actions';
 
 // on prépare de petites fonctions anonymes pour le dispatcher
 
@@ -14,8 +14,15 @@ export const set_des = payload => {
     }
 };
 
-export const get_double = payload => {
-    return {
-        type: GET_DOUBLE, payload
-    }
+    export const set_double = payload => {
+        return {
+            type: SET_DOUBLE, payload
+        }
+
 };
+
+export const set_count_double = () => {
+    return {
+        type: SET_COUNT_DOUBLE
+    }
+}

@@ -7,13 +7,11 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from "react-router-dom";
 
-import message from './store/reducers/message';
-import scores from './store/reducers/scores';
+import des from './store/reducers/des';
 
 const store = configureStore({
   reducer: {
-    message,
-    scores
+    des
   }
 });
 
